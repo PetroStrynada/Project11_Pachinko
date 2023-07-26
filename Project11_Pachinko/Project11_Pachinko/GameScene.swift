@@ -30,8 +30,7 @@ class GameScene: SKScene {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 
         
-        addLineOfBouncers(count: 13, stepInPixels: 206, yCoordinateInPixel: 0)
-
+        addLineOfBouncersAndSlots(count: 12, bouncerStep: 206, yCoordinate: 0)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -53,11 +52,50 @@ class GameScene: SKScene {
         addChild(bouncer)
     }
 
-    func addLineOfBouncers(count: Int, stepInPixels: Int, yCoordinateInPixel: Int ) {
-        var total = 0
-        for _ in 0...count {
-            addBouncer(at: CGPoint(x: stepInPixels * total, y: yCoordinateInPixel))
-            total += 1
+    func makeSlot(at position: CGPoint, isGood: Bool) {
+
+        var slotBase: SKSpriteNode
+        var slotGlow: SKSpriteNode
+
+        if isGood {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
+            slotGlow = SKSpriteNode(imageNamed: "slotGlowGood")
+        } else {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
+            slotGlow = SKSpriteNode(imageNamed: "slotGlowBad")
+        }
+
+        slotBase.position = position
+        slotGlow.position = position
+
+        addChild(slotBase)
+        addChild(slotGlow)
+
+        let spin = SKAction.rotate(byAngle: .pi, duration: 10)
+        let spinForever = SKAction.repeatForever(spin)
+        slotGlow.run(spinForever)
+    }
+
+    func addLineOfBouncersAndSlots(count: Int, bouncerStep: Int, yCoordinate: Int ) {
+
+        var bouncerCount = 0
+        var slotCount = 1
+        var slotStep = bouncerStep / 2
+
+        for _ in 1...count {
+            addBouncer(at: CGPoint(x: bouncerStep * bouncerCount, y: yCoordinate))
+
+            if slotCount % 2 != 0 {
+                makeSlot(at: CGPoint(x: slotStep, y: yCoordinate), isGood: true)
+            } else {
+                makeSlot(at: CGPoint(x: slotStep, y: yCoordinate), isGood: false)
+            }
+
+            slotStep = ((bouncerStep * slotCount) - (bouncerStep / 2))
+            bouncerCount += 1
+            slotCount += 1
         }
     }
+
+
 }
