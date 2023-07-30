@@ -14,6 +14,8 @@
 		FBB4CED72A6FF088006FCF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4CED52A6FF088006FCF4D /* Main.storyboard */; };
 		FBB4CED92A6FF089006FCF4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB4CED82A6FF089006FCF4D /* Assets.xcassets */; };
 		FBB4CEDC2A6FF089006FCF4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4CEDA2A6FF089006FCF4D /* LaunchScreen.storyboard */; };
+		FBEA13A02A76D38A002EBFAE /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = FBEA139F2A76D38A002EBFAE /* FireParticles.sks */; };
+		FBEA13A82A76D576002EBFAE /* SparkParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = FBEA13A72A76D576002EBFAE /* SparkParticles.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		FBB4CED62A6FF088006FCF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBB4CED82A6FF089006FCF4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBB4CEDB2A6FF089006FCF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FBEA139F2A76D38A002EBFAE /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
+		FBEA13A72A76D576002EBFAE /* SparkParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticles.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				FBB4CECD2A6FF088006FCF4D /* GameScene.sks */,
 				FBB4CED12A6FF088006FCF4D /* GameScene.swift */,
 				FBB4CED32A6FF088006FCF4D /* GameViewController.swift */,
+				FBEA139F2A76D38A002EBFAE /* FireParticles.sks */,
+				FBEA13A72A76D576002EBFAE /* SparkParticles.sks */,
 				FBB4CED52A6FF088006FCF4D /* Main.storyboard */,
 				FBB4CED82A6FF089006FCF4D /* Assets.xcassets */,
 				FBB4CEDA2A6FF089006FCF4D /* LaunchScreen.storyboard */,
@@ -127,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB4CED72A6FF088006FCF4D /* Main.storyboard in Resources */,
+				FBEA13A82A76D576002EBFAE /* SparkParticles.sks in Resources */,
 				FBB4CECE2A6FF088006FCF4D /* GameScene.sks in Resources */,
+				FBEA13A02A76D38A002EBFAE /* FireParticles.sks in Resources */,
 				FBB4CED92A6FF089006FCF4D /* Assets.xcassets in Resources */,
 				FBB4CEDC2A6FF089006FCF4D /* LaunchScreen.storyboard in Resources */,
 			);
